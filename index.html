@@ -1,0 +1,507 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="playerstyle.css"> 
+	<title>Molly Lvl 1 Dice</title>
+</head>
+<body>
+<!-- tech music player code -->
+<div id="toggleplayerk">
+<div class="ap" id="aptec">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- music player code end -->
+<!-- bat music player code -->
+<div id="togglebatplayer">
+<div class="ap" id="apbat">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- music player code end -->
+<!-- atmo music player code -->
+<div id="toggleatmoplayer">
+<div class="ap" id="apatmo">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- music player code end -->
+<!-- emot music player code -->
+<div id="toggleemotplayer">
+<div class="ap" id="apemot">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- music player code end -->
+<!-- char music player code -->
+<div id="togglecharplayer">
+<div class="ap" id="apchar">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- music player code end -->
+<!-- amb music player code -->
+<div id="toggleambplayer">
+<div class="ap" id="apamb">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- music player code end -->
+<p>
+<div id="roller"><div class="my-container">
+  <center>
+	<p>&nbsp;
+	<p>&nbsp;<p>
+	<button id="button2">D2</button>
+	<button id="button4">D4</button>
+	<button id="button6">D6</button>
+	<button id="button8">D8</button>
+	<button id="button10">D10</button>
+	<button id="button12">D12</button>
+	<button id="button20">D20</button>
+	<p>
+	<button class="button button6" id="mind">Mind</button>
+	<button class="button button6" id="might">Might</button>
+	<button class="button button6" id="magic">Magic</button>
+    </p>
+	<p>
+	<button class="button button5" id="intellect">INT</button>
+	<button class="button button5" id="social">SOC</button>
+	&nbsp;&nbsp;&nbsp;
+	<button class="button button5" id="brawn">BRW</button>
+	<button class="button button5" id="endurance">END</button>
+	&nbsp;&nbsp;&nbsp;
+	<button class="button button5" id="active">ACT</button>
+	<button class="button button5" id="passive">PAS</button>
+	</p>
+    <p>
+	<button class="button button8" id="dodge">Dodge</button>
+	<button class="button button8" id="resist">Resist</button>
+	<button class="button button8" id="fight">Fight</button>
+	<button class="button button8" id="attack">Attack</button>
+	<button class="button button8" id="spellatk">Incant.</button>
+    </p>
+    <p>
+	<button class="button button9" id="dagger">Dagger</button>
+	<p id="rolldisplay">
+	</p>
+	
+	<p>
+	<button class="button button10" id="newspell">Practice New Spell</button>
+	&nbsp;
+	<button class="button button10" id="willrecover">Willpower Recovery</button>
+    <p>
+	<button class="button button2" id="academics">Academ.</button>
+	<button class="button button2" id="charms">Charms</button>
+	<button class="button button22" id="discipline">Discipline</button>
+	<button class="button button2" id="law">Law</button>
+	<button class="button button2" id="perform">Perform.</button>
+	<p>
+	<button class="button button22" id="research">Research</button>
+	<button class="button button2" id="sense">Sense</button>
+	<button class="button button2" id="weather">Weather.</button>
+	<p>
+	<button class="button button3" id="brawl">Brawl</button>
+	<button class="button button3" id="crafting">Craft.</button>
+	<button class="button button3" id="detect">Detect.</button>
+	<button class="button button33" id="gymnast">Gymnast.</button>
+	<button class="button button3" id="heroics">Heroics</button>
+	<button class="button button3" id="sneaking">Sneak.</button>
+	<p>
+	<button class="button button4" id="benev">Benev.</button>
+	<button class="button button44" id="boundary">Boundary</button>
+	<button class="button button4" id="instinct">Instinct</button>
+	<button class="button button4" id="malev">Malev.</button>
+	<button class="button button44" id="practice">Practice</button>
+	<button class="button button4" id="recognition">Recog.</button>
+	<button class="button button4" id="utility">Utility</button>
+    </p>
+		<script src="script1.js" type="text/javascript"></script> 
+    <script src="script2.js" type="text/javascript"></script>
+    <script src="audio/script.js" type="text/javascript"></script>
+    <script src="audio/battlescript.js" type="text/javascript"></script>
+    <script src="audio/atmoscript.js" type="text/javascript"></script>
+	<script src="audio/charscript.js" type="text/javascript"></script>
+    <script src="audio/emotscript.js" type="text/javascript"></script>
+    <script src="audio/ambscript.js" type="text/javascript"></script>
+    </p></center>
+    </div>
+    </div>
+</body>
